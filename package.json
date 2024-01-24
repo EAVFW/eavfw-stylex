@@ -18,8 +18,8 @@
     "publish-manifest": "npm --workspace packages/tailwind publish --access public",
 
     "release": "npm-run-all --continue-on-error release-*",
-    "release-apps": "npm run release --workspace packages/bootstrap",
-    "release-manifest": "npm run release --workspace packages/tailwind"
+    "release-apps": "npx semantic-release -e semantic-release-monorepo --workspace packages/bootstrap",
+    "release-manifest": "npx semantic-release -e semantic-release-monorepo --workspace packages/tailwind"
   },
   "private": true,
   "workspaces": {
