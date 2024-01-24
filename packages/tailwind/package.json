@@ -9,5 +9,9 @@
     "src"
   ],
   "type": "module",
-  "scripts": { "release": "semantic-release -e semantic-release-monorepo" }
+  "scripts": { "release": "semantic-release -e semantic-release-monorepo" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EAVFW/eavfw-stylex.git"
+  }
 }
