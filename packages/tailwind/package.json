@@ -1,0 +1,12 @@
+{
+  "name": "@eavfw/stylex-tailwind",
+  "author": "Poul Kjeldager <poul@kjeldager.com>",
+  "peerDependencies": {
+    "@stylexjs/stylex": "*"
+  },
+  "main": "./src/index.stylex.ts",
+  "files": [
+    "src"
+  ],
+  "type": "module"
+}

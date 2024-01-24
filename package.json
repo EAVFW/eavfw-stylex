@@ -1,0 +1,35 @@
+{
+  "name": "eavfw",
+  "author": "Poul Kjeldager <poul@kjeldager.com>",
+  "devDependencies": {
+    "concurrently": "7.0.0",
+    "multi-semantic-release": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "semantic-release": "^19.0.5",
+    "semantic-release-monorepo": "7.0.5"
+  },
+  "scripts": {
+    "link": "concurrently  \"npm:link-*\"",
+    "link-manifest": "npm --workspace packages/bootstrap link",
+    "link-apps": "npm --workspace packages/tailwind link",
+
+    "publish": "npm-run-all --sequential --continue-on-error publish-*",
+    "publish-apps": "npm --workspace packages/bootstrap publish --access public",
+    "publish-manifest": "npm --workspace packages/tailwind publish --access public",
+
+    "release": "npm-run-all --continue-on-error release-*",
+    "release-apps": "npm run release --workspace packages/bootstrap",
+    "release-manifest": "npm run release --workspace packages/tailwind"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EAVFW/eavfw-stylex.git"
+  },
+  "license": "MIT"
+}
