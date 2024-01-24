@@ -8,5 +8,6 @@
   "files": [
     "src"
   ],
-  "type": "module"
+  "type": "module",
+  "scripts": { "release": "semantic-release -e semantic-release-monorepo" }
 }
